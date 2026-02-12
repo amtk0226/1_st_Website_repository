@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安心介護サポートセンター | 居宅介護支援事業所</title>
+    <meta name="description" content="地域に根ざした居宅介護支援事業所「安心介護サポートセンター」。経験豊富なケアマネージャーが、利用者様とご家族に寄り添った最適なケアプランをご提案します。">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">安心介護サポートセンター</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="service.html">サービス内容</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="header-cta">無料相談・お問い合わせ</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero fade-in" style="background-image: url('hero.jpg');">
+            <div class="hero-content">
+                <h1>あなたとご家族の<br>「安心」を支えます</h1>
+                <p>経験豊富なケアマネージャーが<br>親身になってサポートいたします。</p>
+            </div>
+        </section>
+
+        <section class="section container fade-in">
+            <h2 class="section-title">お知らせ</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="border-bottom: 1px solid #ddd; padding: 15px 0;">
+                    <span style="color: var(--color-text-light); margin-right: 15px;">2024.01.20</span>
+                    <a href="news.html">Webサイトをリニューアルしました。</a>
+                </li>
+                <li style="border-bottom: 1px solid #ddd; padding: 15px 0;">
+                    <span style="color: var(--color-text-light); margin-right: 15px;">2023.12.15</span>
+                    <a href="#">年末年始の営業について</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section container fade-in"
+            style="background-color: var(--color-bg-light); padding: 60px 40px; border-radius: var(--radius-soft);">
+            <h2 class="section-title">私たちの特徴</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>地域密着</h3>
+                    <p>地域の医療機関、介護サービス事業者と密に連携し、迅速かつ最適なサービスを調整します。</p>
+                </div>
+                <div class="card">
+                    <h3>経験豊富</h3>
+                    <p>介護福祉士、社会福祉士などの資格を持つベテランケアマネージャーが在籍しています。</p>
+                </div>
+                <div class="card">
+                    <h3>相談無料</h3>
+                    <p>ケアプランの作成費用は全額介護保険から給付されるため、自己負担はありません。</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="about.html" class="btn-large">私たちについて</a>
+            </div>
+        </section>
+
+        <section class="section container fade-in" style="text-align: center;">
+            <h2 class="section-title">お困りではありませんか？</h2>
+            <p style="font-size: 1.2em; margin-bottom: 40px; line-height: 2;">
+                「親の介護が必要になったが、どうすればいいか分からない」<br>
+                「介護保険の申請方法が分からない」<br>
+                など、介護に関するお悩みは私たちにご相談ください。
+            </p>
+            <a href="service.html" class="btn-large">サービス内容を見る</a>
+        </section>
+    </main>
+
+    <script>
+        // Simple Fade-in Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+    <footer>
+        <div class="container">
+            <p><strong>安心介護サポートセンター</strong></p>
+            <p>〒100-0000 東京都〇〇区〇〇 1-2-3</p>
+            <p>TEL: 03-1234-5678 / FAX: 03-1234-5679</p>
+            <p>営業時間: 月〜金 9:00〜18:00</p>
+            <br>
+            <p>&copy; 2024 安心介護サポートセンター All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

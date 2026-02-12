@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービス内容・ご利用の流れ | 安心介護サポートセンター</title>
+    <meta name="description" content="ケアプラン作成、要介護認定の申請代行など、主なサービス内容とご利用開始までの流れをご案内します。">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">安心介護サポートセンター</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="service.html">サービス内容</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="header-cta">無料相談・お問い合わせ</a>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1 class="section-title">サービス内容</h1>
+
+        <div class="card-grid" style="margin-bottom: 60px;">
+            <div class="card">
+                <h3>ケアプラン（居宅サービス計画）の作成</h3>
+                <p>利用者様の心身の状況やご家族の希望を伺い、自立した生活を送るために必要な介護サービス計画を作成します。</p>
+            </div>
+            <div class="card">
+                <h3>要介護認定の申請代行</h3>
+                <p>介護保険を利用するために必要な「要介護認定」の申請手続きを、ご本人やご家族に代わって行います。</p>
+            </div>
+            <div class="card">
+                <h3>サービス事業者との連絡調整</h3>
+                <p>訪問介護、デイサービス、福祉用具などのサービス事業所と連携し、円滑にサービスが利用できるよう調整します。</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">ご利用の流れ</h2>
+        <div class="step-flow">
+            <div class="step-item">
+                <span class="step-title">STEP 1. ご相談・お問い合わせ</span>
+                <p>まずはお電話（03-1234-5678）またはお問い合わせフォームよりご連絡ください。ご自宅へ訪問し、お困りごとをお伺いします。</p>
+            </div>
+            <div class="step-item">
+                <span class="step-title">STEP 2. 要介護認定の申請</span>
+                <p>介護保険を利用するには、市町村による要介護認定が必要です。申請の手続きを代行いたします。</p>
+            </div>
+            <div class="step-item">
+                <span class="step-title">STEP 3. ケアプランの作成</span>
+                <p>認定結果に基づき、ご本人・ご家族と相談しながら、どのようなサービスを利用するか計画を作成します。</p>
+            </div>
+            <div class="step-item">
+                <span class="step-title">STEP 4. サービスの利用開始</span>
+                <p>各サービス事業者と契約を結び、プランに沿ってサービスの利用がスタートします。定期的にモニタリング（状況確認）も行います。</p>
+            </div>
+        </div>
+
+        <div class="contact-actions">
+            <p>相談は無料です。お気軽にご連絡ください。</p>
+            <a href="contact.html" class="btn-large">お問い合わせはこちら</a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">よくあるご質問</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">費用はかかりますか？</div>
+                    <div class="accordion-content">
+                        <p>ケアプランの作成費用は全額介護保険から給付されるため、利用者様の自己負担はありません。</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">急ぎの対応は可能ですか？</div>
+                    <div class="accordion-content">
+                        <p>はい、可能な限り迅速に対応いたします。まずは電話でご状況をお聞かせください。</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">本人が介護に拒否的ですが相談できますか？</div>
+                    <div class="accordion-content">
+                        <p>はい、ご家族様からのご相談も承っております。ご本人様の気持ちに寄り添いながら、少しずつ関係を築いていけるようサポートいたします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+
+                const content = item.querySelector('.accordion-content');
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p><strong>安心介護サポートセンター</strong></p>
+            <p>〒100-0000 東京都〇〇区〇〇 1-2-3</p>
+            <p>&copy; 2024 安心介護サポートセンター All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 安心介護サポートセンター</title>
+    <meta name="description" content="介護に関するご相談、お問い合わせはこちらから。お電話、またはフォームよりお気軽にご連絡ください。">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">安心介護サポートセンター</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="service.html">サービス内容</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="header-cta">無料相談・お問い合わせ</a>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1 class="section-title">お問い合わせ</h1>
+
+        <div class="contact-info">
+            <p>お電話でのご相談はこちら（受付時間：平日 9:00〜18:00）</p>
+            <span class="phone-number">03-1234-5678</span>
+            <p>※ご相談は無料です。秘密は厳守いたします。</p>
+        </div>
+
+        <section>
+            <h2>お問い合わせフォーム</h2>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('送信機能はデモのため実装されていません。');">
+                <div>
+                    <label for="name">お名前 <span style="color:red; font-size: 0.8em;">(必須)</span></label>
+                    <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                </div>
+                <div>
+                    <label for="tel">電話番号 <span style="color:red; font-size: 0.8em;">(必須)</span></label>
+                    <input type="tel" id="tel" name="tel" required placeholder="例：090-1234-5678">
+                </div>
+                <div>
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" placeholder="例：taro@example.com">
+                </div>
+                <div>
+                    <label for="message">ご相談内容</label>
+                    <textarea id="message" name="message" rows="5" placeholder="ご相談内容を簡単にご記入ください"></textarea>
+                </div>
+                <button type="submit">送信する</button>
+            </form>
+        </section>
+
+        <section style="margin-top: 60px;">
+            <h2>アクセス</h2>
+            <!-- Interactive Google Map -->
+            <div
+                style="width: 100%; height: 400px; border-radius: var(--radius-soft); overflow: hidden; box-shadow: var(--shadow-soft);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12963.292376175585!2d139.7527909!3d35.6841285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c0c0b13f5db%3A0x6e7z0a0b1c2d3e4f!2sTokyo!5e0!3m2!1sen!2sjp!4v1600000000000!5m2!1sen!2sjp"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="card" style="text-align: left; padding: 20px;">
+                    <h3 style="font-size: 1.2em;">対応エリア</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>〇〇区全域</li>
+                        <li>△△区（一部地域）</li>
+                        <li>□□市（〇〇線沿線）</li>
+                    </ul>
+                </div>
+                <div class="card" style="text-align: left; padding: 20px;">
+                    <h3 style="font-size: 1.2em;">アクセス詳細</h3>
+                    <p>〇〇駅 南口より徒歩5分</p>
+                    <p>目印：〇〇郵便局の隣のビル2F</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Simple Validation
+            const name = document.getElementById('name').value;
+            const tel = document.getElementById('tel').value;
+
+            if (name.trim() === '' || tel.trim() === '') {
+                alert('必須項目を入力してください。');
+                return;
+            }
+
+            // Simulate form submission
+            // In a real app, you would send data to a server here.
+            window.location.href = 'thanks.html';
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p><strong>安心介護サポートセンター</strong></p>
+            <p>〒100-0000 東京都〇〇区〇〇 1-2-3</p>
+            <p>&copy; 2024 安心介護サポートセンター All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
